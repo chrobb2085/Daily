@@ -12,8 +12,12 @@ An automated weekday morning briefing for Chris, written by Claude Code.
 
 A Claude Code Routine starts a fresh cloud session at 6:59 AM Pacific,
 Monday through Friday. The session researches, writes, archives, and returns
-the briefing as its final message, so it's ready before 8:00 AM. Run
-notifications are on (email and push).
+the briefing as its final message, so it's ready before 8:00 AM.
+
+Delivery is in Claude: each morning's briefing is a new session in the Claude
+Code session list (claude.ai/code or the Claude app), and a push notification
+fires when it's ready. Email notification is also on, but that email is only a
+run summary.
 
 The Routine's prompt carries the full spec inline, because a fresh session may
 not have this repo checked out. To change the content, edit `SPEC.md`, then
