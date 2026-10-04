@@ -1,54 +1,34 @@
 # Morning Briefing — Routine Prompt
 
-This is the prompt the scheduled Routine sends each weekday morning. It runs in a
-fresh cloud session with this repository checked out. Keep it in sync with the
-live Routine if you edit it.
+This is the instruction the "Morning Briefing" Routine (trig_019HkUcKMEwXuirmNSCFncDV)
+sends each weekday at 6:59 AM Pacific. Each run starts a fresh cloud session
+that may not have this repo checked out, so the live prompt is these steps
+followed by the full text of `SPEC.md`. If you edit either file, update the
+Routine's prompt to match.
 
 ---
 
-Write today's morning briefing for Chris.
+Write today's morning briefing for Chris. The full spec is at the end of this message. Follow it exactly; it is the source of truth for audience, tone, coverage, search strategy, tickers, product lineup, and what not to do.
 
-1. Read `SPEC.md` at the repo root. It is the source of truth for audience,
-   tone, coverage, search strategy, tickers, product lineup, and what not to do.
-   Follow it exactly.
+1. Get today's date in Pacific Time (`TZ=America/Los_Angeles date`). Use it in every search and in the opening line.
 
-2. Get the date in Pacific Time (`TZ=America/Los_Angeles date`). Use it in
-   every search and in the opening line.
+2. Avoid repeating yourself. Past briefings are archived in the GitHub repo chrobb2085/Daily on the `briefing-archive` branch, under briefings/YYYY-MM-DD.md. If you have a checkout of that repo (look in the working directory; otherwise try `git clone https://github.com/chrobb2085/Daily daily-repo`), run `git fetch origin briefing-archive` and read the five most recent briefings with `git show origin/briefing-archive:briefings/<file>`. Note the advice, angles, and stories already covered. Don't repeat them unless something materially changed, and if it did, say what changed. If you can't reach the repo, skip this step and go on.
 
-3. Read recent history so you don't repeat yourself. Run
-   `git fetch origin briefing-archive` and, if that branch exists, read the five
-   most recent files in its `briefings/` directory
-   (`git ls-tree --name-only origin/briefing-archive briefings/` then
-   `git show origin/briefing-archive:briefings/<file>`). Note the strategic
-   advice, angles, and stories already covered; don't repeat them unless
-   something materially changed, and then say what changed.
+3. Research with WebSearch, and use WebFetch for detail. Run at least the 11 daily searches in the spec, plus whichever conditional searches apply today: FOMC days, earnings reported last night, PGA Tour event weeks, NFL Sunday and college football Saturday results on Mondays. Go deep on golf: Foresight+ and GC2 reception (GolfWRX, Golf Simulator Forum, r/golfsimulator, MyGolfSpy, PlayBetter), Garmin, Acushnet, TrackMan, Full Swing/TaylorMade, SkyTrak, Rapsodo, Blue Tees, DKS and ASO, and PE activity in golf and outdoor recreation. Check market numbers (index closes, futures, yields, oil, gold, bitcoin) against at least one primary market source. Never invent a figure. If you can't confirm one, leave it out or say it's unconfirmed.
 
-4. Research with WebSearch (and WebFetch for detail). Run at least the 11 daily
-   searches in SPEC.md, plus the conditional ones that apply today (FOMC days,
-   earnings that reported last night, PGA Tour event weeks, Monday mornings
-   after NFL Sunday / Saturday college football, etc.). Go deep on golf: Foresight+
-   and GC2 reception (GolfWRX, Golf Simulator Forum, r/golfsimulator, MyGolfSpy,
-   PlayBetter), Garmin, Acushnet, TrackMan, Full Swing/TaylorMade, SkyTrak,
-   Rapsodo, Blue Tees, DKS/ASO, and PE activity in golf and outdoor. Verify
-   numbers (index closes, yields, oil, bitcoin) against at least one primary
-   market source; never invent a figure. If a number can't be confirmed, leave it
-   out or say it's unconfirmed.
+4. Write the briefing in Markdown following the spec:
+- Open with "Good morning, Chris. <Weekday>, <Month> <day>." and then the lead.
+- Use narrative paragraphs under clear headers, and let the news decide the order.
+- Weave in sharp "what this means for you" analysis that ties the news to Chris's FP&A role in a hardware-to-subscription transition, his PE sponsor SVP, his personal portfolio, and the competitive landscape. Give second-order effects, not summaries.
+- Ask at most one question.
+- Close with "Today's Watchlist" (3–5 items) and sign off with ⛳.
+- Aim for 2,000–3,500 words. On a slow day, write less and say it's slow.
+- No citation markup and no walls of bullets.
 
-5. Write the briefing in Markdown following SPEC.md: open with
-   "Good morning, Chris. <Weekday>, <Month> <day>." plus the lead; narrative
-   paragraphs under clear headers; let the news set the order; weave in sharp
-   "what this means for you" analysis that connects the news to Chris's
-   hardware-to-subscription FP&A role, his PE sponsor, his portfolio, and the
-   competitive landscape (second-order effects, not summaries); at most one
-   question; close with "Today's Watchlist" (3–5 items) and sign off with ⛳.
-   2,000–3,500 words; shorter on a slow day, and say it's slow. No citation
-   markup, no bullet walls.
+5. Archive it if you can reach the repo. Check out the briefing-archive branch (from origin/briefing-archive if it exists, otherwise `git checkout --orphan briefing-archive && git rm -rf --cached . -q`). Save the briefing as briefings/YYYY-MM-DD.md, commit only that file with the message "Briefing YYYY-MM-DD", and run `git push -u origin briefing-archive`. If any of this fails, continue anyway, because delivery matters more than the archive.
 
-6. Save it as `briefings/YYYY-MM-DD.md` on the `briefing-archive` branch
-   (check that branch out from `origin/briefing-archive` if it exists, otherwise
-   create it as an orphan branch), commit with message
-   "Briefing YYYY-MM-DD", and push to `origin briefing-archive`. If the push
-   fails, continue anyway; delivery matters more than the archive.
+6. Your final message is the delivery. Output the complete briefing text exactly as written and nothing else: no preamble and no notes about the process.
 
-7. Your final message is the delivery: output the complete briefing text, exactly
-   as saved, and nothing else (no preamble, no notes about the process).
+==================== SPEC ====================
+
+<full contents of SPEC.md>

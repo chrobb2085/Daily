@@ -15,4 +15,7 @@ Monday through Friday. The session researches, writes, archives, and returns
 the briefing as its final message, so it's ready before 8:00 AM. Run
 notifications are on (email and push).
 
-To change the content, edit `SPEC.md`; the Routine reads it on every run.
+The Routine's prompt carries the full spec inline, because a fresh session may
+not have this repo checked out. To change the content, edit `SPEC.md`, then
+copy the change into the Routine's prompt (claude.ai → Routines → Morning
+Briefing), or ask Claude to sync it.
