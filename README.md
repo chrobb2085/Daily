@@ -10,7 +10,7 @@ An automated weekday morning briefing for Chris, written by Claude Code.
 
 ## Schedule
 
-A Claude Code Routine starts a fresh cloud session at 6:59 AM Pacific,
+A Claude Code Routine starts a fresh cloud session at 6:14 AM Pacific,
 Monday through Friday. The session researches, writes, archives, and returns
 the briefing as its final message, so it's ready before 8:00 AM.
 

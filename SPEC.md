@@ -1,7 +1,11 @@
 # Automated Morning Briefing — Claude Code Spec
 
 ## What This Is
-A daily morning briefing delivered by 8:00 AM PT via email. It should read like a sharp, conversational newsletter written by someone who deeply understands my role, industry, and interests — not a generic news digest.
+A daily morning briefing delivered by 8:00 AM PT. It should read like a sharp, conversational newsletter written by someone who deeply understands my role, industry, and interests — not a generic news digest.
+
+It has two jobs, and both matter every day:
+1. **Get me current.** Broad coverage of what happened, not just the handful of things that touch my job.
+2. **Teach me something.** I want to spend each morning (~25–30 minutes) actually learning: the background, history, mechanics, and "why" behind the news, plus one dedicated deep-dive lesson. I should finish smarter, not just caught up.
 
 ## Who I Am (Context for Personalization)
 - **Name:** Chris
@@ -22,12 +26,25 @@ A daily morning briefing delivered by 8:00 AM PT via email. It should read like 
 - Conversational, smart, not stuffy — like a well-informed friend who also happens to be a finance professional
 - Fluid format, NOT rigid numbered sections — let the news shape the structure each day
 - Lead with whatever is most important or interesting, not a fixed order
-- Skip repeated advice I've already heard — if nothing changed on a topic, don't pad it
-- On slow news days, keep it short and say so. Don't manufacture depth
+- Skip repeated advice I've already heard — if nothing changed on a topic, don't recycle it
+- Explain, don't just report. For every major story, give the context a smart non-specialist needs: how we got here, who the key players are and what they want, the mechanism (how the thing actually works), the historical parallel, and what would change the outlook. Pitch it at a sharp finance professional, not a beginner and not a specialist in that field
+- On slow news days, don't cut it short. Shift the weight toward explainers, backstory, and the deep dive instead of manufacturing drama
 - No bullet-point walls. Narrative paragraphs with clear headers
-- Approximately 2,000–3,500 words depending on the day's news density
+- Approximately 4,500–6,500 words (a 25–30 minute read). Thorough is the point
 
 ### Core Coverage Areas (Not Rigid Sections)
+
+**Today's Deep Dive (Every Day — ~900–1,300 words)**
+- One substantive lesson per day, written like a great long-form explainer: the concept, how it works, a worked example or numbers, history, and why it matters to me
+- Hook it to something in today's news when possible ("Treasury yields rose on a weak jobs print — here's how the term premium works")
+- Rotate across domains so it stays varied over a week: finance & accounting (SaaS/subscription metrics, cohort and LTV math, ASC 606 revenue recognition, LBO and PE fund mechanics, valuation, capital structure, working capital), markets & economics (bond math, the Fed's toolkit, currency, commodities, economic history), business strategy & case studies (famous turnarounds, hardware-to-subscription transitions like Peloton, Adobe, Garmin, Sonos, John Deere), tech & AI (how the technology actually works, AI economics), geopolitics & history (backgrounders on ongoing conflicts and trade fights), golf & sports business (launch monitor physics, equipment economics, league media deals, sports analytics), and the occasional wildcard (science, psychology, a great business story)
+- Never repeat a deep-dive topic covered in the last 30 briefings; build on earlier ones when it makes sense ("Last week we covered LTV; today, payback period")
+- End the deep dive with a one-line "the takeaway to remember"
+
+**US & World News (Broad — ~800–1,200 words)**
+- US politics and policy: Congress, the White House, courts, regulation, taxes, trade, anything moving business or markets. Balanced and factual
+- World: the top 4–6 international stories, not just the one tied to oil. Each with enough backstory that I understand it
+- Science, health, and tech stories worth knowing even if they don't touch my job
 
 **Markets Snapshot (~60 seconds read)**
 - Previous close: S&P 500, Nasdaq, Dow, Russell 2000
@@ -77,6 +94,7 @@ A daily morning briefing delivered by 8:00 AM PT via email. It should read like 
 - Tech/culture news worth having opinions about at dinner or on the golf course
 - Major geopolitical developments explained clearly (Iran war status, trade policy, etc.)
 - Entertainment, viral moments, interesting business stories
+- One "Smart Thing to Say Today": a fact, stat, or story with the context to bring it up confidently in conversation
 
 **Today's Watchlist**
 - Close with 3-5 specific things to watch today
@@ -99,6 +117,11 @@ A daily morning briefing delivered by 8:00 AM PT via email. It should read like 
 9. `NFL scores results [current week]` OR `NBA scores` OR `NHL scores` — sports
 10. `AI tools finance FP&A [recent]` — career/tools
 11. `Iran war latest OR oil Strait Hormuz [date]` — geopolitics (while relevant)
+12. `top world news [date]` and `international news today` — broad world coverage
+13. `Congress OR White House OR Supreme Court news [date]` — US politics and policy
+14. `business news biggest stories [date]` — corporate deals, M&A, IPOs, bankruptcies
+15. `science OR health OR technology breakthrough [recent]` — things worth knowing
+16. Background searches for the deep dive and for each major story's history and context (expect 5–10 of these)
 
 ### Conditional Searches (When Relevant)
 - Fed/FOMC meeting days: search for decision and commentary
@@ -108,6 +131,8 @@ A daily morning briefing delivered by 8:00 AM PT via email. It should read like 
 - NFL/college football: Saturday night and Sunday night score searches
 
 ### Sources to Prioritize
+- News: AP, Reuters, BBC, NPR, The Economist, Axios, Politico
+- Explainers and background: The Economist, Bloomberg Odd Lots, Money Stuff-style analysis, Fed and BIS research notes, Wikipedia for history and dates (verify numbers elsewhere)
 - Markets: CNBC, Yahoo Finance, Bloomberg, TheStreet, Motley Fool
 - Golf: GolfWRX, Golf Simulator Forum, Breaking Eighty, MyGolfSpy, Lasco Press, Golf Digest, PGA Tour website, PlayBetter
 - AI/Tech: TechCrunch, Ars Technica, The Verge, Wall Street Prep
@@ -156,7 +181,7 @@ A daily morning briefing delivered by 8:00 AM PT via email. It should read like 
 
 ## What NOT to Do
 - Don't repeat the same strategic advice across briefings (e.g., "build your Garmin competitive deck" — I've heard it)
-- Don't pad sections when there's no news — just say "quiet day for golf" and move on
+- Don't fake news. If a beat is quiet (e.g., golf), say so briefly and spend the words on context, history, or the deep dive instead
 - Don't use citation markup or formatting artifacts in the output
 - Don't over-explain basics I already know (what the Fed does, what EBITDA is, etc.)
 - Don't reference "GC3S" — it's been sunset
@@ -167,8 +192,8 @@ A daily morning briefing delivered by 8:00 AM PT via email. It should read like 
 
 ## Delivery
 - **Time:** Ready by 8:00 AM Pacific, Monday through Friday
-- **Format:** Clean markdown or HTML email
-- **Length:** 2,000–3,500 words (shorter on slow days, longer when warranted)
+- **Format:** Clean markdown, delivered as the final message of a Claude Code session
+- **Length:** 4,500–6,500 words, every day (a 25–30 minute read). Slow days shift weight to explainers, not shorter output
 - **Sign-off:** End with ⛳
 
 ---
